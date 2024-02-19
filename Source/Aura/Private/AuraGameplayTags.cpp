@@ -50,10 +50,6 @@ void FAuraGameplayTags::InitializeNativeGameplayTags()
 		FName("Attributes.Secondary.CriticalHitChance"),
 		FString("Chance to double damage plus critical hit bonus"));
 
-	GameplayTags.Attributes_Secondary_CriticalHitChance = UGameplayTagsManager::Get().AddNativeGameplayTag(
-		FName("Attributes.Secondary.CriticalHitChance"),
-		FString("Chance to double damage plus critical hit bonus"));
-
 	GameplayTags.Attributes_Secondary_CriticalHitDamage = UGameplayTagsManager::Get().AddNativeGameplayTag(
 		FName("Attributes.Secondary.CriticalHitDamage"),
 		FString("Bonus damage added when a critical hit is scored"));
