@@ -17,7 +17,7 @@ enum class ECharacterClass : uint8
 };
 
 USTRUCT(BlueprintType)
-struct FCharacterClassDefaultInto
+struct FCharacterClassDefaultInfo
 {
 	GENERATED_BODY()
 
@@ -37,7 +37,7 @@ class AURA_API UCharacterClassInfo : public UDataAsset
 public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Character Class Defaults")
-	TMap<ECharacterClass, FCharacterClassDefaultInto> CharacterClassInformation;
+	TMap<ECharacterClass, FCharacterClassDefaultInfo> CharacterClassInformation;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Common Class Defaults")
 	TSubclassOf<UGameplayEffect> SecondaryAttributes;
@@ -45,5 +45,5 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Common Class Defaults")
 	TSubclassOf<UGameplayEffect> VitalAttributes;
 
-	FCharacterClassDefaultInto GetClassDefaultInfo(ECharacterClass CharacterClass);
+	FCharacterClassDefaultInfo GetClassDefaultInfo(ECharacterClass CharacterClass);
 };
